@@ -57,19 +57,20 @@ ul {
 .section {
     padding-top: 120px;
     padding-bottom: 120px;
+    
 }
 
 .pege-header {
     padding-top: 24px;
     padding-bottom: 24px;
-    
+    height: 72px;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     background: var(--white-color);
 }
 
 .pege-header-box {
     display: flex;
     align-items: center;
-    
 }
 
 /* Логотип */
@@ -140,27 +141,30 @@ ul {
 /* Секція-Герой */
 .hero-style  {
     /* Фон Hero! */
+    display: flex;
     padding-top: 192px;
     padding-bottom: 192px;
+    margin-right: auto;
+    margin-left: auto;
 
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgb(46, 47, 66, 0.7)), url(../images/hero/people-office.jpg);
     background-size: cover;
     background-color: var(--dark-color);
+    width: 1440px;
 }
 
 .hero-box {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 492px;
-    width: 603px;
+    flex-direction: column;
+    
 }
 
 .hero-title {
+    text-align: start;
+    width: 492px;
     margin-bottom: 48px;
-    text-align: center;
-
-    font-weight: 700;
+    font-weight: 500;
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
@@ -177,7 +181,6 @@ ul {
     font-size: 16px;
     line-height: 1.19;
 
-    
     border-radius: 4px;
 
     color: var(--white-color);
@@ -187,6 +190,9 @@ ul {
 .button:hover,
 .button:focus {
     background-color: var(--blue-button);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    
 }
 
 /* Прихований заголовок*/
@@ -342,8 +348,10 @@ color: var(--body-text-color);
 .social-list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 24px;
     margin-top: 8px;
+    
 }
 
 .social-list-link {
@@ -354,6 +362,11 @@ color: var(--body-text-color);
     height: 40px;
     border-radius: 50%;
     background-color: var(--primary-brand-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    background-color: var(--success-color);
 }
 
 .social-list-icon {
@@ -455,42 +468,67 @@ color: var(--body-text-color);
     color: var(--white-color);
 }
 
-/* Кліенти */
+/* .customers-icon {
+    
+
+} */
+
+/* .icons {
+    color: var(--subtle-text-color);
+
+} */
+
+.customers-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 72px;
+}
 
 .customers {
+    background-color: var(--white-color);
 }
-.customers-box {
-}
-.container {
-}
-.customers-title {
 
-}
 .customers-list {
     display: flex;
     justify-content: center;
-}
-.customers-item {
+    flex-wrap: wrap;
+    gap: 24px;
 }
 .customers-linc {
-}
-.customers-icon {
-}
-
-
-/* Стилі-Футер! */
-.pege-footer-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--subtle-text-color);
+    padding: 32px 16px;
+    width: 168px;
+    height: 88px;
+}   
 
+.customers-icon {
+    fill: currentColor;
+}
+
+.customers-linc { color: var(--subtle-text-color); 
+border: 1px solid var(--subtle-text-color);
+}
+
+.customers-linc:hover, 
+.customers-linc:focus { 
+    color: violet;
+    border: 1px solid violet; 
 }
 
 .footer {
+    display: flex;
     background: var(--dark-color);
     padding-top: 100px;
     padding-bottom: 100px;
 }
 /* Лого футер */
+
 .logo-footer {
     margin-bottom: 16px;
 
@@ -501,6 +539,10 @@ color: var(--body-text-color);
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--light-color);
+}
+
+.pege-footer-container {
+    margin-right: 120px;
 }
 
 .footer-text {
@@ -517,6 +559,40 @@ color: var(--body-text-color);
     color: var(--primary-brand-color);
 }
 
-/* .footer {
+/* Social media */
 
-}    */
+.footer-box {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.social-media-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+
+    letter-spacing: 0.02em;
+    color: var(--white-color);
+}
+
+.social-media-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.social-media-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.social-media-icon {
+    color: var(--light-color);
+}
