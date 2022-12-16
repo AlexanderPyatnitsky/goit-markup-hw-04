@@ -32,6 +32,7 @@ body {
     font-weight: 500;
     font-size: 14px;
     color: var(--body-text-color);
+    background-color: var(--white-color);
 }
 
 a {
@@ -65,7 +66,6 @@ ul {
     padding-bottom: 24px;
     height: 72px;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-    background: var(--white-color);
 }
 
 .pege-header-box {
@@ -141,15 +141,14 @@ ul {
 /* Секція-Герой */
 .hero-style  {
     /* Фон Hero! */
-    display: flex;
+    
     padding-top: 192px;
     padding-bottom: 192px;
     margin-right: auto;
     margin-left: auto;
-
+    background-position: center;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgb(46, 47, 66, 0.7)), url(../images/hero/people-office.jpg);
     background-size: cover;
-    background-color: var(--dark-color);
     width: 1440px;
 }
 
@@ -176,23 +175,22 @@ ul {
     padding: 16px 32px;
     border-color: transparent;
     font-family: inherit;
-    font-style: normal;
+    
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-
     border-radius: 4px;
-
     color: var(--white-color);
-    background-color: var(--primary-brand-color);
+    background: var(--primary-brand-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    
 }
 
 .button:hover,
 .button:focus {
     background-color: var(--blue-button);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 4px;
 }
 
 /* Прихований заголовок*/
@@ -207,7 +205,7 @@ ul {
     padding: 0;
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
-    margin: -1px;
+    margin: 1px;
 }
 
 .two-header {
@@ -235,6 +233,15 @@ color: var(--dark-color);
     flex-wrap: wrap;
 }
 
+.advantage-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    background-color: #F4F4FD;
+    margin-bottom: 8px;
+}
 .advantage-title {
 
     font-weight: 700;
@@ -263,14 +270,8 @@ color: var(--dark-color);
 /* <!--Приклади робіт--> */
 
 .work-examples {
+    text-align: center;
     background-color: var(--white-color);
-}
-
-.work-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
 }
 
 .work-examples-list {
@@ -285,13 +286,8 @@ color: var(--dark-color);
 
 /* Команда */
 .block-team {
+    text-align: center;
     background-color: var(--light-color);
-}
-
-.team-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
 }
 
 .team-title {
@@ -342,6 +338,7 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
+margin-top: 8px;
 color: var(--body-text-color);
 }
 
@@ -361,12 +358,14 @@ color: var(--body-text-color);
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    margin-top: 12px;
     background-color: var(--primary-brand-color);
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
     background-color: var(--success-color);
+    
 }
 
 .social-list-icon {
@@ -376,7 +375,6 @@ color: var(--body-text-color);
 /* Портфоліо! */
 
 .portfolio {
-    background-color: var(--white-color);
     padding-top: 96px;
 }
 
@@ -396,22 +394,26 @@ color: var(--body-text-color);
 
 .portfolio-body {
     flex-basis: calc((100% - 48px) / 3);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-
     background-color: var(--white-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-body:nth-child(3n) {
     margin-right: 0;
 }
 
+.portfolio-card:hover,
+.portfolio-card:focus {
+    border: 0.5px solid #F4F4FD;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .portfolio-card {
     padding: 32px 16px 32px 16px;
-
     border-right: 0.5px solid var(--white-color);
     border-bottom: 0.5px solid var(--white-color);
     border-left: 0.5px solid var(--white-color);
-    
 }
 
 .portfolio-title {
@@ -426,7 +428,6 @@ color: var(--body-text-color);
 
 .portfolio-text {
     margin-top: 8px;
-    
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -464,19 +465,12 @@ color: var(--body-text-color);
 
 .button-filter:hover,
 .button-filter:focus {
-    background-color: var(--primary-brand-color);
     color: var(--white-color);
-}
-
-/* .customers-icon {
+    background: #4D5AE5;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 4px;
     
-
-} */
-
-/* .icons {
-    color: var(--subtle-text-color);
-
-} */
+}
 
 .customers-title {
     font-weight: 700;
@@ -501,8 +495,6 @@ color: var(--body-text-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--subtle-text-color);
-    padding: 32px 16px;
     width: 168px;
     height: 88px;
 }   
@@ -517,8 +509,8 @@ border: 1px solid var(--subtle-text-color);
 
 .customers-linc:hover, 
 .customers-linc:focus { 
-    color: violet;
-    border: 1px solid violet; 
+    color: var(--primary-brand-color);
+    border: 1px solid var(--primary-brand-color); 
 }
 
 .footer {
@@ -552,6 +544,7 @@ border: 1px solid var(--subtle-text-color);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-top: 16px;
     color: var(--accent-color);
 }
 
@@ -583,16 +576,18 @@ border: 1px solid var(--subtle-text-color);
     gap: 16px;
 }
 
-.social-media-item {
+.social-media-link {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background-color: var(--body-text-color)
 }
 
-.social-media-icon {
-    color: var(--light-color);
+.social-media-link:hover,
+.social-media-link:focus {
+background-color: var(--success-color);
 }
+
