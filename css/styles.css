@@ -175,7 +175,7 @@ ul {
     padding: 16px 32px;
     border-color: transparent;
     font-family: inherit;
-    
+    letter-spacing: 0.04em;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -347,8 +347,7 @@ color: var(--body-text-color);
     justify-content: center;
     flex-wrap: wrap;
     gap: 24px;
-    margin-top: 8px;
-    
+    margin-top: 12px;
 }
 
 .social-list-link {
@@ -358,7 +357,6 @@ color: var(--body-text-color);
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-top: 12px;
     background-color: var(--primary-brand-color);
 }
 
@@ -395,6 +393,9 @@ color: var(--body-text-color);
 .portfolio-body {
     flex-basis: calc((100% - 48px) / 3);
     background-color: var(--white-color);
+}
+
+.portfolio-linc {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
@@ -402,11 +403,15 @@ color: var(--body-text-color);
     margin-right: 0;
 }
 
-.portfolio-card:hover,
-.portfolio-card:focus {
-    border: 0.5px solid #F4F4FD;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.portfolio-linc {
+    display: block;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.portfolio-linc:hover,
+.portfolio-linc:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    
 }
 
 .portfolio-card {
@@ -451,7 +456,7 @@ color: var(--body-text-color);
     padding: 8px 16px;
     border-radius: 4px;
     border: 1px solid var(--accent-color);
-
+    color: var(--primary-brand-color);
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -460,16 +465,15 @@ color: var(--body-text-color);
     letter-spacing: 0.04em;
 
     background: var(--light-color);
-    color: var(--primary-brand-color);
+    
 }
 
 .button-filter:hover,
 .button-filter:focus {
     color: var(--white-color);
-    background: #4D5AE5;
+    background-color: #4D5AE5;
+    border-color: transparent;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 4px;
-    
 }
 
 .customers-title {
@@ -497,15 +501,15 @@ color: var(--body-text-color);
     align-items: center;
     width: 168px;
     height: 88px;
+    color: var(--subtle-text-color); 
+    border: 1px solid var(--subtle-text-color);
+    border-radius: 4px;
 }   
 
 .customers-icon {
     fill: currentColor;
 }
 
-.customers-linc { color: var(--subtle-text-color); 
-border: 1px solid var(--subtle-text-color);
-}
 
 .customers-linc:hover, 
 .customers-linc:focus { 
